@@ -1,0 +1,107 @@
+Define generative AI in your own words as if you’re describing it to a five-year-old.
+
+My Practical Gen AI usecase at work?
+
+During my time interviewing several candidates across various levels—from junior to director—I faced the challenge of balancing their specific seniority with their unique skill sets. I realized that rather than interviewing a candidate on their weaknesses, it was more effective to focus on the strengths highlighted in their resumes.
+
+Since my firm provided Microsoft Copilot access, I integrated the candidates' resumes and my standard questionnaire into the tool. I began by prompting Copilot to "use the resume to pick three questions from the question bank that specifically align with this candidate's skill set."
+
+After proofreading the initial suggestions, I would refine the prompt to better target the candidate's seniority: "Choose five questions instead, ensuring they are appropriate for a director-level role."
+
+This approach made the interview process much smoother and helped the candidates feel more comfortable. I also ensured that the questions and skills perfectly matched the specific job roles to avoid any conflicts, which significantly reduced my overall workload.
+
+I took the process a step further by using Copilot to rephrase my interview notes into structured feedback. I organized my evaluations into "must-haves," "areas for improvement," and "nice-to-haves." This clear structure greatly assisted HR and the hiring manager in their final decision-making process.
+
+Describe several scenarios where using generative AI is not a good idea
+
+Using Copilot to write code in a language the developer does not understand can be risky. Creating an entire project without a formal review from an architect or Site Reliability Engineer (SRE) can lead to significant security vulnerabilities in production.
+
+Uploading sensitive documents to these models can create serious governance and compliance issues for an organization.
+
+It is important to allow your brain to think and retrieve information independently. Avoid jumping straight to an AI for every instant idea, as this can lead to a dependency where you feel unable to work without it.
+
+Since most models are trained to suggest consulting a medical professional for serious conditions, leaning entirely on an AI's medical answers could lead to disastrous results.
+
+
+					Define generative AI in your own words as if you’re describing it to a five-year-old.
+
+Imagine you want this Genie interface to draw lightning mcqueen. it immediately refuses, stating that  it is owned by famous motor company and it will not draw something owned by those folks.
+Ok then how about asking it to draw a boy buying his favourite book in a book fair.
+bingo—it draws a boy with a red cap about to pick up a book featuring a light red dinosaur on the cover.
+amazing, isn't it? next, you ask it to "draw a daddy."
+it draws a man standing opposite the boy in that same book fair.
+wow, you think—i only asked for "daddy," but it drew it based out my previous description (book fair). but wait a second; the boy’s favorite book now has a light orange dinosaur on the cover instead of red.
+Why was that? That is because you tricked it(Hallucination)
+
+now, consider something else, like asking it to create kumon math exercises with "5 plus anything less than 10." it handles that perfectly. isn't that amazing?
+but remember, it cannot do your homework for you. you can ask questions and it can provide suggestions, but you still have to do the work. This Genie is called Gen AI
+
+
+
+Why is generative AI different from other types of AI?
+Describe several scenarios where using generative AI is not a good idea.
+Without restating any of the use cases from Chapter 1, describe several use cases you think might be a good fit for generative AI. Justify why you believe so.
+Distinguish GAI interfaces from GAI models.
+Describe four of the most used interfaces, from OpenAI, Microsoft, Google, and Anthropic.
+Describe some pros and cons of using these interfaces.
+
+------------------------
+Why is the transformer architecture such an important part of generative AI LLMs?
+
+
+What kinds of tasks can you imagine using prompting for? Try not to use examples you’ve read about. Instead, try to think of things in your personal or work lives.
+
+What are the differences between an LLM and a small language model?
+
+What implications are there with model training cutoffs? How can this limitation be overcome?
+
+Describe generative AI image generation in your own words.
+
+Compare and contrast the different Vision GAI architectures you read about this week.
+How do you think Vision GAI will affect industries? Give examples of industries and how you believe Vision GAI will affect each.
+What is prompt engineering? Do you think it’s appropriate for all generative AI users? Why or why not?
+What are the parts of a prompt and why do you think each is important?
+Describe in-context learning and why you think it’s a valuable technique in prompt engineering.
+
+Explain the RAG architecture in your own terms, like you are talking to a five-year-old.
+What are some of the challenges with using RAG?
+Explain vector databases in your own words.
+What problem(s) does RAG attempt to solve? What are several benefits of RAG?
+
+Using your own words, what is LLM fine-tuning and why would anyone want to do such a thing?
+What is meant by LLM adaptation and why is it done?
+Explain LLM fine-tuning to a five-year-old.
+Explain the LLM fine-tuning evaluation criteria.
+What are the key LLM fine-tuning stages?
+Describe the stages of training an LLM end-to-end.
+Describe at least five of the model adaptation techniques.
+In your own words, describe Low-Rank Adaptation (LoRA).
+What is quantization and how is it different from LoRA?
+Does fine-tuning teach the model new information? Defend your answer.
+What is reinforcement learning from human feedback (RLHF)? What are its challenges?
+Describe the layers of the generative AI application stack. Do you think anything is missing?
+What are the GAI architecture principles? Describe each briefly in your own words.
+Pick an application you know of and apply the GAI architecture to make it better.
+What is an orchestrator in the context of a GAI architecture? Why have it? What are some examples of such orchestrators?
+What is prompt management and how can this be done?
+How does a small language model (SLM) compare to an LLM?
+Can you use multiple language models in the same architecture flow? If so, give an example of how you might do this.
+Compare and contrast MLOps and GenAIOps.
+What are the unique challenges with GAI production deployments? How can they be overcome?
+Describe the various deployment options, focusing on pros and cons of each.
+What are the best practices for production deployment, according to the textbook author?
+At a high level, describe MLFlow.
+In your opinion, what are the three most significant challenges with using generative AI? Justify your selections.
+What are several ways companies can overcome intellectual property issues related to generative AI?
+Do you believe the challenges you learned about this week will get better or worse in the future? Why?
+What are some of the Gen AI-specific attacks? Describe the attacks using sources beyond the textbook.
+What is prompt injection? How can it be prevented?
+Describe Model Denial of Service in your own words.
+What is the problem with sending personally identifiable and confidential information to an LLM interface? What should companies do to avoid this?
+What does it mean to “steal” a model? Please be specific.
+In your own words, describe the AI Lifecycle.
+What are some of the highlights of the European Union AI regulations?
+How would you summarize the Executive Order on the safe, secure, and trustworthy development and use of AI?
+Do you believe AI should be regulated? Why or why not? If so, how?
+
+
