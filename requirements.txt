@@ -15,4 +15,4 @@ langchain-openai
 langchain-community
 spacy
 chromadb
-
+pdfplumber
