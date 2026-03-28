@@ -1,0 +1,156 @@
+This week, you’ll create a number of prompt-based solutions. Each must be done in Python using an API (most likely OpenAI). It’s a good idea to practice using an interface, which is safe for what we’re doing because the data isn’t real.
+
+
+
+Problem #1: Math and Extraction with Zero and One-Shot Prompting
+
+Using the following email, build two prompts: first, create a zero-shot prompt to extract all the information from the email as JSON.
+Then, create a one-shot prompt to extract the information as JSON and run the extract on the 2nd email (this will be one prompt with one-shot prompting):
+
+
+Hey Jim,
+
+I'd like to order some new shoes. Please ship the following:
+
+1. Nike Air Jordan I - 2 pair
+2. Converse All-Star - 10 pair
+3. New Balance 990 - 1 pair
+4. Nike Zoom Fly 5 men's red - 2 pair
+
+Please provide sub-totals and grand total cost.
+
+
+Thanks.
+
+Lance Gentry
+123 Main St.
+Chelsea, MI 48109
+248-229-2229
+
+
+
+Extract:
+
+shoe_agent_name (this is Jim)
+
+request_type (this is "Order")
+
+shoe_brand, shoe_model, shoe_quantity
+
+customer_name
+
+customer_street
+
+customer_city
+
+customer_state
+
+customer_zip
+
+customer_phone
+
+
+
+In addition, you'll assign a shoe_price for each shoe, calculate the shoe_subtotal for each shoe, and then the grand_total. 
+
+
+
+Hey Michelle,
+
+
+
+I'd like to order some new shoes. Please ship the following:
+
+
+
+1. Nike Air Jordan I - 1 pair
+
+2. Converse All-Star - 20 pair
+
+3. New Balance 990 - 2 pair
+
+4. Nike Zoom Fly 5 men's red - 5 pair
+
+
+
+Please provide sub-totals and grand total cost.
+
+
+
+Thanks.
+
+
+
+Artis Gilmore
+
+723 Lexington Blvd.
+
+New York, NY 10001
+
+(503) 484-1029
+
+
+
+Use one or more prompts to accomplish this extraction. You’re resulting JSON should look something like this: 
+
+{
+'shoe_agent_name': 'Michelle', 
+'request_type': 'Order', 
+'customer_name': 'Artis Gilmore', 
+'customer_street': '723 Lexington Blvd.', 
+'customer_city': 'New York', 
+'customer_state': 'NY', 
+'customer_zip': 10001, 
+'customer_phone': '(503) 484-1029', 
+
+'items': [
+{'shoe_brand': 'Nike', 
+'shoe_model': 'Air Jordan I', 
+'shoe_quantity': 1, 
+'shoe_price': 100, 
+'shoe_subtotal': 100}, 
+{'shoe_brand': 'Converse', 
+'shoe_model': 'All-Star', 
+'shoe_quantity': 20, 
+'shoe_price': 30, 
+'shoe_subtotal': 600}, 
+{'shoe_brand': 'New Balance', 
+'shoe_model': '990', 
+'shoe_quantity': 2, 
+'shoe_price': 110, 
+'shoe_subtotal': 220}, 
+{'shoe_brand': 'Nike', 
+'shoe_model': "Zoom Fly 5 men's red", 
+'shoe_quantity': 5, 
+'shoe_price': 400, 
+'shoe_subtotal': 2000}], 
+'grand_total': 2920}
+
+
+
+ 
+
+Problem #2: Chat Completion for Chain of Thought
+
+Re-create the chat from Listing 6.4 in the textbook (shown below), but use OpenAI, not Azure OpenAI.
+
+
+
+Q: There were nine computers in the server room. Five more computers were installed each day, from Monday to Thursday. How many computers are now in the server room?
+
+A: There are 4 days from Monday to Thursday. 5 computers were added each day. That means in total 4 * 5 = 20 computers were added. There were 9 computers initially, so now there are 9 + 20 = 29 computers. The answer is 29.
+
+Q: Michael had 58 golf balls. On Tuesday, he lost 23 golf balls. On Wednesday, he lost 2 more. How many golf balls did he have at the end of Wednesday?
+
+A: Michael initially had 58 balls. He lost 23 on Tuesday, so after that he has 58 - 23 = 35 balls. On Wednesday he lost 2 more so now he has 35 - 2 = 33 balls. The answer is 33.
+
+Q: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?
+
+A: She bought 5 bagels for $3 each. This means she spent $15. She has $8 left.
+
+Q: When I was 6 my sister was half my age. Now I'm 70 how old is my sister?
+
+
+
+Build the solution using a Jupyter Notebook (no other Python is acceptable) and include Markdown that thoroughly explains your thought process and your commentary on the results you achieved. Obvious Markdown that explicitly only explains the code will be ignored, since I can read the code. I’m looking for your commentary and evaluation in your own words. In addition, your Markdown should explicitly compare the similarities and differences between the replies to each of the questions and each of the responses for Problem #1.
+
