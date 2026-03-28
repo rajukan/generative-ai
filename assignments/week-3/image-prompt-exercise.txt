@@ -1,0 +1,19 @@
+Using at least two different Vision GAI interfaces, create three or four unique images using your own prompts. Use the same prompts in each interface. In the end, you'll generate 6-8 images (the same 3-4 prompts used with each interface). Write a 250–500-word formal paper on the similarities and differences between the images generated from each. Include the images in your paper. Your paper must follow this format provided in the APA Help Center.
+
+
+
+Use the Stable Diffusion API within a Jupyter Notebook to generate and edit an image. Be sure to include Markdown that describes what you’re doing and a narrative on the result and your thoughts on how easy or hard the API was to use.
+
+Introduction:
+
+
+
+Similarities
+
+
+
+
+Differences 
+
+
+Conclusion
