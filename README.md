@@ -1,1 +1,5 @@
-# generative-ai
+Welcome to DSC 670 – Advanced Uses of Generative AI. The extent and speed with which generative AI (Gen AI) is being used and experimented with is hard to quantify, but it’s as major a development as the personal computer and the Internet (maybe more so). But Gen AI isn’t a “thing,” it’s many things and understanding those things -- how they can (and should) be used -- is what this course is all about. It’s going to be an exciting term, but also challenging so don’t fall behind and as always, communicate with me. I’m here to help you succeed in this course.
+
+I will also post weekly lectures. I won’t be hiding any secret content in these lectures; they’re simply meant as another resource to help you learn.
+
+Programming within this course is Python focused - Python 3.9 or higher. Jupyter Notebooks is required and is the only format coding assignments can be turned in (except where otherwise noted).
