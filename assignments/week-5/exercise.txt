@@ -1,0 +1,5 @@
+Create a chat like the one in this week’s lecture video using any Wikipedia page except the one in the video. Be sure to ask your bot at least two separate questions. 
+
+
+
+Build the solution using a Jupyter Notebook (no other Python is acceptable) and include Markdown that thoroughly explains your thought process and your commentary on the results you achieved. Obvious comments that explicitly only explain the code will be ignored since I can read the code. I’m looking for your commentary and evaluation in your own words.
