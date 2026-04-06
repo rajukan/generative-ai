@@ -1,0 +1,10 @@
+Techniques such as LoRA take considerable time and computational resources (including the need for a GPU). For this week’s assignment, re-build the model from the Matthew MacFarquhar article.
+
+
+
+Since a GPU is required, please consider using Google Colab. You can change the runtime type to GPU (T4). It doesn’t take long to train the model.
+
+
+
+Build the solution using a Jupyter Notebook (no other Python is acceptable) and include Markdown that explains what the author is doing in the code. I’m looking for your commentary and evaluation in your own words.
+
