@@ -1,0 +1,30 @@
+Building a dataset can take quite a bit of time and that’s not really what this class is about. For this assignment, follow the book’s example (Chapter 9) but adapt it for OpenAI instead of Azure OpenAI using the Fine-tuning – OpenAI API example provided by OpenAI. You’ll be adapting code from Azure OpenAI to just OpenAI and you’ll need to use the REST endpoints to check the model training process using the Python requests package. The training job runs on OpenAI servers, so don’t worry, your PC won’t get bogged down during the (long) training process.
+
+
+
+As an aside, it’s worth noting that the base gpt-3.5-turbo model can already return emojis, this fine-tuning has it return “emojis” in a specific way – e.g., “(devil)” instead of the devil emoji.
+
+
+
+When your model is trained, you’ll get the model's name from the following endpoint (which is in the OpenAI article):
+
+'https://api.openai.com/v1/fine_tuning/jobs/your_training_job_id'
+
+
+
+In addition to training the model, you’ll also want to test the model. Since that code doesn’t seem to exist anywhere in either the book or the referenced web page, here it is: Week 6 Exercise Code.txt 
+
+completion = client.chat.completions.create(
+  model="YOUR MODEL NAME",
+  messages=[
+    {"role": "system", "content": "You're a chatbot that only responds with emojis!"},
+    {"role": "user", "content": "What the hell is going on?"}
+  ],
+  max_tokens=50
+)
+print(completion.choices[0].message.content)
+
+
+Build the solution using a Jupyter Notebook (no other Python is acceptable) and include Markdown that thoroughly explains your thought process and your commentary on the results you achieved. Obvious comments that explicitly only explain the code will be ignored since I can read the code. I’m looking for your commentary and evaluation in your own words.
+
+
