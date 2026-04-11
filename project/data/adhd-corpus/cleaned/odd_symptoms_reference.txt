@@ -1,0 +1,46 @@
+Diagnostic Criteria
+F91.3
+A. A pattern of angry/irritable mood, argumentative/defiant behavior, or
+vindictiveness lasting at least 6 months as evidenced by at least four symptoms
+from any of the following categories, and exhibited during interaction with at least
+one individual who is not a sibling.
+Angry/Irritable Mood
+1. Often loses temper.
+2. Is often touchy or easily annoyed.
+3. Is often angry and resentful.
+Argumentative/Defiant Behavior
+4. Often argues with authority figures or, for children and adolescents, with
+adults.
+5. Often actively defies or refuses to comply with requests from authority figures
+or with rules.
+6. Often deliberately annoys others.
+7. Often blames others for his or her mistakes or misbehavior.
+Vindictiveness
+8. Has been spiteful or vindictive at least twice within the past 6 months.
+Note: The persistence and frequency of these behaviors should be used to
+distinguish a behavior that is within normal limits from a behavior that is
+symptomatic. For children younger than 5 years, the behavior should occur on
+most days for a period of at least 6 months unless otherwise noted (Criterion
+A8). For individuals 5 years or older, the behavior should occur at least once
+per week for at least 6 months, unless otherwise noted (Criterion A8). While
+these frequency criteria provide guidance on a minimal level of frequency to
+define symptoms, other factors should also be considered, such as whether the
+frequency and intensity of the behaviors are outside a range that is normative
+for the individual’s developmental level, gender, and culture.
+B. The disturbance in behavior is associated with distress in the individual or others
+in his or her immediate social context (e.g., family, peer group, work colleagues),
+or it impacts negatively on social, educational, occupational, or other important
+areas of functioning.
+
+C. The behaviors do not occur exclusively during the course of a psychotic,
+substance use, depressive, or bipolar disorder. Also, the criteria are not met for
+disruptive mood dysregulation disorder.
+Specify current severity:
+Mild: Symptoms are confined to only one setting (e.g., at home, at school, at
+work, with peers).
+Moderate: Some symptoms are present in at least two settings.
+Severe: Some symptoms are present in three or more settings.
+Specifiers
+It is not uncommon for individuals with oppositional defiant disorder to show symptoms only at
+home and only with family members. However, the pervasiveness of the symptoms is an
+indicator of the severity of the disorder.
