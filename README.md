@@ -3,3 +3,10 @@ Welcome to DSC 670 – Advanced Uses of Generative AI. The extent and speed with
 I will also post weekly lectures. I won’t be hiding any secret content in these lectures; they’re simply meant as another resource to help you learn.
 
 Programming within this course is Python focused - Python 3.9 or higher. Jupyter Notebooks is required and is the only format coding assignments can be turned in (except where otherwise noted).
+
+Project details
+
+
+Run it via
+
+streamlit run .\adhd_streamlit.py
