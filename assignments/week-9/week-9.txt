@@ -1,0 +1,18 @@
+You’re going to recreate the MLFlow example outlined in the text and shown in this code. It’s not especially difficult but shows how to run the model in a very simple “app,” with the MLFlow monitoring running.
+
+
+
+You’ll need to install some packages to make this work, including:
+
+
+
+mlflow
+tiktoken (optional, the author has a simple token counter)
+prometheus-client
+
+
+Running the MLFlow server, after you install the Python package is simple. The command (at a terminal) is simply mlflow server.
+
+
+
+Build the solution using a Jupyter Notebook (no other Python is acceptable) and include Markdown that explains what the author is doing in the code. I’m looking for your commentary and evaluation in your own words.
