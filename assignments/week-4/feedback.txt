@@ -94,3 +94,103 @@ These experiments demonstrate that LLMs do not truly “understand” the task b
 Bottom line (2 sentences, your style)
 
 Your implementation is correct but overly verbose, which weakens prompt effectiveness. The missing piece is explaining why each prompting method behaves differently—focus on pattern learning vs hallucination rather than just output quality.
+
+
+-----------------------
+fix for Core Issue
+Your core issue is **overly verbose Q&A (few-shot) prompting**. You need to **compress it into minimal pattern examples** so the model learns structure, not noise.
+
+
+## **✅ Fixed Version: Minimal Structured Q&A Prompt**
+
+Instead of full emails + large JSON, use **atomic examples**:
+
+```python
+def create_compact_qa_prompt(email):
+    prompt = f"""
+Extract structured data from the input.
+
+Input: Nike Air Jordan I - 2 pair
+Output: {{"shoe_brand":"Nike","shoe_model":"Air Jordan I","shoe_quantity":2}}
+
+Input: Converse All-Star - 10 pair
+Output: {{"shoe_brand":"Converse","shoe_model":"All-Star","shoe_quantity":10}}
+
+Input:
+{email}
+
+Output:
+"""
+    return prompt
+```
+
+---
+
+## **✅ Even Better (Full Assignment-Aligned Version)**
+
+Keep **ONE full example only**, not multiple long ones:
+
+```python
+def create_clean_few_shot(email):
+    prompt = f"""
+Extract the following fields as JSON:
+shoe_agent_name, request_type, customer_name, address fields, items[], grand_total
+
+Example:
+
+Input:
+Hey Jim,
+1. Nike Air Jordan I - 2 pair
+
+Output:
+{{
+  "shoe_agent_name": "Jim",
+  "request_type": "Order",
+  "items": [
+    {{"shoe_brand":"Nike","shoe_model":"Air Jordan I","shoe_quantity":2}}
+  ]
+}}
+
+Now extract from:
+
+Input:
+{email}
+
+Output:
+"""
+    return prompt
+```
+
+---
+
+## **🔑 What Changed (this is the actual fix)**
+
+* ❌ Removed full long email + full JSON duplication
+
+* ❌ Removed redundant fields in examples
+
+* ❌ Removed unnecessary instructions
+
+* ✅ Kept **short input-output patterns**
+
+* ✅ Focused on **schema learning, not content copying**
+
+* ✅ Reduced token noise → better accuracy
+
+---
+
+## **Why this works (important for your write-up)**
+
+* Model learns **mapping, not memorization**
+* Less context → **higher signal-to-noise ratio**
+* Prevents **overfitting to one large example**
+
+---
+
+## **2-line summary (your style)**
+
+Reducing Q&A examples to minimal input-output pairs improves signal clarity and avoids overloading the model. This forces the LLM to learn structural mappings instead of copying large verbose examples.
+
+---
+
+If you want, I can also **rewrite your existing few-shot block directly (diff-style)** so you can paste into your notebook.
