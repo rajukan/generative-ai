@@ -1,0 +1,96 @@
+Feedback:
+You were really instructed in the lecture to use structured Q&A, which you did but not until the end. The structure of Q&A is far more brief; the more instruction you give for such a simple problem, the less accurate the LLM is going to be (too much information).
+Your documentation was adequate but not nearly complete. You had some basic observations and no real insight into how either prompting technique works.
+
+LLM Summary:
+1. Core issue: Your Q&A (few-shot) is too verbose
+
+You did this:
+
+Long email
+Full JSON
+Extra instructions
+
+But the assignment expects structured Q&A = minimal pattern learning, like:
+
+Input: Nike Air Jordan I - 2 pair
+Output: {"shoe_brand":"Nike","shoe_model":"Air Jordan I","shoe_quantity":2}
+
+👉 Your version overloaded the model with:
+
+Full email context
+Redundant fields
+Long JSON
+
+Why this hurts performance:
+
+LLM attention gets diluted
+It starts copying instead of learning structure
+Increases hallucination (you saw arbitrary prices)
+2. Major conceptual gap (this is what cost you marks)
+
+You observed outputs, but didn’t explain why prompting behaves differently.
+
+Here’s what you should have written (this is the missing “insight”):
+
+Zero-shot
+No examples → model relies on pretrained priors
+Result: correct structure, but hallucinates missing fields (prices)
+Insight: LLMs optimize for completeness, not correctness when underspecified
+One-shot
+Adds a single example → introduces format anchoring
+Result: better JSON consistency, less extra text
+Insight: model imitates structure, not logic
+Few-shot (Q&A)
+Pattern-based learning → strongest constraint
+Result: consistent schema, inferred pricing pattern
+Insight:
+model performs implicit function learning (price mapping)
+behaves like in-context learning, not reasoning
+3. Your biggest mistake (important)
+
+You wrote:
+
+“The LLM was able to infer the prices...”
+
+This is not correct framing.
+
+More accurate:
+
+It did pattern completion from your example
+Not true inference or reasoning
+If you changed one price → model would copy pattern, not logic
+
+👉 This distinction is exactly what professors look for.
+
+4. Missing comparison section (explicitly required)
+
+Your assignment asked for:
+
+“compare similarities and differences between responses”
+
+You didn’t clearly structure that.
+
+What you should add:
+Technique	Strength	Weakness
+Zero-shot	Flexible	Hallucinates missing data
+One-shot	Better format control	Still copies noise
+Few-shot	High consistency	Overfits to examples
+5. Quick fix version of your conclusion (use this)
+
+Rewrite your conclusion like this:
+
+Prompting effectiveness depends on degree of structure provided
+Zero-shot fails due to lack of constraints
+One-shot improves via format imitation
+Few-shot works best because of pattern learning
+However, few-shot risks overfitting and lack of generalization
+6. If you want to upgrade to an A
+
+Add one paragraph like this:
+
+These experiments demonstrate that LLMs do not truly “understand” the task but instead perform probabilistic pattern matching. As more structured examples are provided, the model shifts from generative behavior (zero-shot) to imitative behavior (few-shot), improving consistency but reducing flexibility.
+
+Bottom line (2 sentences, your style)
+
+Your implementation is correct but overly verbose, which weakens prompt effectiveness. The missing piece is explaining why each prompting method behaves differently—focus on pattern learning vs hallucination rather than just output quality.
